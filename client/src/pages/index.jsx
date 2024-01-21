@@ -1,0 +1,24 @@
+export { default as Ecommerce } from './Ecommerce';
+export { default as CRD_Dashboard } from './CRD_Dashboard';
+export { default as CRD_Chat } from './CRD_Chat';
+export { default as CRD_Kanban } from './CRD_Kanban';
+export { default as CRD_GanttChart } from './CRD_GanttChart';
+export { default as AdminUniversityList } from './AdminUniversityList';
+export { default as AdminUserList } from './AdminUserList';
+export { default as Editor } from './Editor';
+export { default as Customers } from './Customers';
+export { default as ColorPicker } from './ColorPicker';
+export { default as CRD_Calendar } from './CRD_Calendar';
+export { default as Area } from './Charts/Area';
+export { default as Bar } from './Charts/Bar';
+export { default as ColorMapping } from './Charts/ColorMapping';
+export { default as ColorMapping2 } from './Charts/ColorMapping2';
+export { default as ColorMapping3 } from './Charts/ColorMapping3';
+export { default as Financial } from './Charts/Financial';
+export { default as Line } from './Charts/Line';
+export { default as AdminPieChart } from './Charts/AdminPieChart';
+export { default as AdminPieMethod } from './Charts/AdminPieMethod';
+export { default as Pyramid } from './Charts/Pyramid';
+export { default as AdminStacked } from './Charts/AdminStacked';
+export { default as Alerts } from './Alerts';
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Report</title>
+    <style>
+       /* Reset some default browser styles */
+       /* Reset some default browser styles */
+/* Reset some default browser styles */
+*{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* font-size: xx-large; */
+            text-align: center;
+            background-color: rgb(255, 250, 240);
+        }
+       
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: 150px;
+            font-size: larger;
+        }
+        th, td {
+            border: 1px solid #f5b35e;
+            padding: 8px;
+            text-align: left;
+            
+        }
+        th {      
+            background-color: rgb(231, 162, 83);
+        }
+        td{
+            background-color: rgb(252, 238, 220)
+        }
+      
+    </style>
+    
+    </style>
+</head>
+<body>
+   
+        
+    <h1 style="text-align: center;">Sankalp </h1>
+    </nav>
+    <h2>Plagiarism Report</h2>
+<h2>{{Project_title}}</h2>
+    
+
+    <h2>Top 5 Project Based On Similarity</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Project Title</th>
+                <th>Similarity</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for pair, similarity_score in top_5_pairs%}
+                                
+                <tr>
+                    {% if similarity_score*100>50 %}
+                    <td style="background-color: red;">{{ pair[0] }}</td>
+                    <td style="background-color: red;">{{ "%0.2f"|format(similarity_score*100) }}%</td>
+                    {% else %}
+                    <td>{{ pair[0] }}</td>
+                    <td>{{ "%0.2f"|format(similarity_score*100) }}%</td>
+                    {% endif %}
+                </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+
+    <h2>Segment Similarity Scores With {{top_5_pairs[0][0][0]}}:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Segment</th>
+                <th>Similarity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for segment, segment_similarity_score in segment_similarity_scores.items() %}
+                <tr>
+                    <td>{{ segment }}</td>
+                    <td>{{ "%0.2f"|format(segment_similarity_score*100) }}%</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if highest_similarity > 0.5 %}
+        <h2>The segment with the highest plagiarism:</h2>
+        <p>Segment: {{ highest_similarity_segment }}, Similarity: {{ "%0.2f"|format(highest_similarity*100) }}%</p>
+        {% endif %}
+</body>
+</html>
