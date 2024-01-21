@@ -7,7 +7,7 @@ const { MONGOURI } = require('./config/keys')
 
 app.use(cors (
   {
-     origin: ["https://api-sankalp.vercel.app"],
+     origin: ["https://unite-bharat.vercel.app"],
      methods: ["GET", "POST", "PUT", "DELETE"],
      credentials: true
 
