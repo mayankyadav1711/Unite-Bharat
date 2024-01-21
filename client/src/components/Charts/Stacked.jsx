@@ -10,11 +10,11 @@ const Stacked = ({ width, height }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let apiEndpoint = '/project-tech-vs-non-tech-breakdown';
+        let apiEndpoint = 'https://api-sankalp.vercel.app/project-tech-vs-non-tech-breakdown';
     
         if (state?.usertype === 'university') {
           const universityId = state?._id;
-          apiEndpoint = `/university/project-tech-vs-non-tech-breakdown/${universityId}`;
+          apiEndpoint = `https://api-sankalp.vercel.app/university/project-tech-vs-non-tech-breakdown/${universityId}`;
         }
     
         const response = await fetch(apiEndpoint);

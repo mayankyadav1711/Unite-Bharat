@@ -8,7 +8,7 @@ const HomeTrendProject = () => {
     // Fetch top 4 most liked projects
     const fetchTopProjects = async () => {
       try {
-        const response = await fetch('/top-liked-projects');
+        const response = await fetch('https://api-sankalp.vercel.app/top-liked-projects');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

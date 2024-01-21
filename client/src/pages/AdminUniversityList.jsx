@@ -12,14 +12,14 @@ const AdminUniversityList = () => {
     const fetchData = async () => {
       try {
         if (state?.usertype === 'admin') {
-          const response = await fetch('/university-users');
+          const response = await fetch('https://api-sankalp.vercel.app/university-users');
           const data = await response.json();
           setUniversityUsers(data);
         } else if (state?.usertype === 'university') {
           const universityId = state?.university;
 
           if (universityId) {
-            const response = await fetch(`/mentors-for-university/${universityId}`);
+            const response = await fetch(`https://api-sankalp.vercel.app/mentors-for-university/${universityId}`);
             const data = await response.json();
             setUniversityUsers(data);
           }

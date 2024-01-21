@@ -57,7 +57,7 @@ export default function TemporaryDrawer() {
   const [searchInput, setSearchInput] = useState("");
   const [filteredEvents, setFilteredEvents] = useState([]);
   useEffect(() => {
-    fetch("/event-forms") // Change the URL to match your API endpoint
+    fetch("https://api-sankalp.vercel.app/event-forms") // Change the URL to match your API endpoint
       .then((response) => response.json())
       .then((data) => {
         const reversedData = data.reverse();

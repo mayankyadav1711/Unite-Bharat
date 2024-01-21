@@ -71,7 +71,7 @@ const AuthSignup = () => {
     };
   
     try {
-      const response = await fetch("/signup", {
+      const response = await fetch("https://api-sankalp.vercel.app/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

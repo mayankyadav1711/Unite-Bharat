@@ -68,7 +68,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/home-stats');
+        const response = await fetch('https://api-sankalp.vercel.app/home-stats');
         const data = await response.json();
 
         setTotalVisits(data.Students); // Assuming Students represent total visits

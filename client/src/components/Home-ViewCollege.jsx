@@ -43,7 +43,7 @@ const HomeViewCollege = () => {
   
     const fetchUniversityDetails = async () => {
       try {
-        const response = await fetch(`/university/${universityId}`);
+        const response = await fetch(`https://api-sankalp.vercel.app/university/${universityId}`);
         const data = await response.json();
         setUniversityDetails(data);
       } catch (error) {
@@ -53,7 +53,7 @@ const HomeViewCollege = () => {
   
     const fetchUserProjects = async () => {
       try {
-        const response = await fetch(`/uniprojects/${universityId}`);
+        const response = await fetch(`https://api-sankalp.vercel.app/uniprojects/${universityId}`);
         const data = await response.json();
         setUserProjects(data);
       } catch (error) {

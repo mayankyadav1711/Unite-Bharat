@@ -20,7 +20,7 @@ const AdminUserList = () => {
     const fetchUsers = async () => {
       try {
         if (state?.usertype === "admin") {
-          const response = await fetch("/students-and-mentors");
+          const response = await fetch("https://api-sankalp.vercel.app/students-and-mentors");
           const data = await response.json();
           setUsersData(data);
         } else if (state?.usertype === "university") {

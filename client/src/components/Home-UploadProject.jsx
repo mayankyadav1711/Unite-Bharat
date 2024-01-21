@@ -23,7 +23,7 @@ const HomeUploadProject = () => {
     // Fetch student profiles when the component mounts
     const fetchStudents = async () => {
       try {
-        const response = await fetch("/students");
+        const response = await fetch("https://api-sankalp.vercel.app/students");
         if (response.ok) {
           const studentsData = await response.json();
           setStudents(studentsData);
@@ -38,7 +38,7 @@ const HomeUploadProject = () => {
     // Fetch mentor profiles when the component mounts
     const fetchMentors = async () => {
       try {
-        const response = await fetch("/mentors");
+        const response = await fetch("https://api-sankalp.vercel.app/mentors");
         if (response.ok) {
           const mentorsData = await response.json();
           setfetchedMentors(mentorsData);
@@ -201,7 +201,7 @@ const HomeUploadProject = () => {
         new mongoose.Types.ObjectId(mentor)
       );
   
-      const response = await fetch("/uploadproject", {
+      const response = await fetch("https://api-sankalp.vercel.app/uploadproject", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -42,7 +42,7 @@ const HomeProjectCategoryList = () => {
             };
     
             // Construct the URL with filter parameters
-            const url = `/public-projectslist?${new URLSearchParams(filterParams)}`;
+            const url = `https://api-sankalp.vercel.app/public-projectslist?${new URLSearchParams(filterParams)}`;
     
             // Fetch the data
             const response = await fetch(url);

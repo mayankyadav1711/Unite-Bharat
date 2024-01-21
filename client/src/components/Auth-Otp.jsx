@@ -44,7 +44,7 @@ const AuthOtp = () => {
     console.log("userEmail:", userEmail);
     console.log("otp:", otp);
     // Make an API call to your server for OTP verification
-    fetch("/verify-otp", {
+    fetch("https://api-sankalp.vercel.app/verify-otp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -33,7 +33,7 @@ const UserDashboard = () => {
   
     const fetchUserProjects = async () => {
       try {
-        const response = await fetch(`/user-projects/${state?._id}`);
+        const response = await fetch(`https://api-sankalp.vercel.app/user-projects/${state?._id}`);
         const data = await response.json();
         setUserProjects(data);
       } catch (error) {
@@ -43,7 +43,7 @@ const UserDashboard = () => {
   
     const fetchLikedProjects = async () => {
       try {
-        const response = await fetch(`/user-liked-projects/${state?._id}`);
+        const response = await fetch(`https://api-sankalp.vercel.app/user-liked-projects/${state?._id}`);
         const data = await response.json();
         setLikedProjects(data);
       } catch (error) {

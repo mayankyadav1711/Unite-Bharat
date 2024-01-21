@@ -25,7 +25,7 @@ const Alerts = () => {
     };
 
     try {
-      const response = await fetch("/event-form", {
+      const response = await fetch("https://api-sankalp.vercel.app/event-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

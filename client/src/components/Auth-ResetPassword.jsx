@@ -26,7 +26,7 @@ const AuthReset = () => {
         return;
       }
   
-      fetch('/new-password', {
+      fetch('https://api-sankalp.vercel.app/new-password', {
         method: 'post',
         headers: {
           'Content-Type': 'application/json',

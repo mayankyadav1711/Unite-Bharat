@@ -43,7 +43,7 @@ const ViewProfile = () => {
 
   const fetchUserProjects = async () => {
     try {
-      const response = await fetch(`/user-projects/${state?._id}`);
+      const response = await fetch(`https://api-sankalp.vercel.app/user-projects/${state?._id}`);
       const data = await response.json();
       setUserProjects(data);
     } catch (error) {
@@ -54,7 +54,7 @@ const ViewProfile = () => {
   
   const fetchLikedProjects = async () => {
     try {
-      const response = await fetch(`/user-liked-projects/${state?._id}`);
+      const response = await fetch(`https://api-sankalp.vercel.app/user-liked-projects/${state?._id}`);
       const data = await response.json();
       setLikedProjects(data);
     } catch (error) {
@@ -64,12 +64,12 @@ const ViewProfile = () => {
   const fetchUserData = async () => {
     try {
       // Fetch user details
-      const userDetailsResponse = await fetch(`/user-details/${id}`);
+      const userDetailsResponse = await fetch(`https://api-sankalp.vercel.app/user-details/${id}`);
       const userDetailsData = await userDetailsResponse.json();
       setUserDetails(userDetailsData);
 
       // Fetch user projects
-      const userProjectsResponse = await fetch(`/user-projects/${id}`);
+      const userProjectsResponse = await fetch(`https://api-sankalp.vercel.app/user-projects/${id}`);
       const userProjectsData = await userProjectsResponse.json();
       setUserProjects(userProjectsData);
     } catch (error) {

@@ -12,7 +12,7 @@ const CgList = () => {
     // Fetch university users when the component mounts
     const fetchUniversityUsers = async () => {
       try {
-        const response = await fetch("/university-users");
+        const response = await fetch("https://api-sankalp.vercel.app/university-users");
         const data = await response.json();
         setUniversityUsers(data);
       } catch (error) {

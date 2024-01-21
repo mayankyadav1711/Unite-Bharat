@@ -33,7 +33,7 @@ const HomeExploreProject = () => {
       };
 
       // Construct the URL with filter parameters
-      const url = `/public-projectslist?${new URLSearchParams(filterParams)}`;
+      const url = `https://api-sankalp.vercel.app/public-projectslist?${new URLSearchParams(filterParams)}`;
 
       // Fetch the data
       const response = await fetch(url);
@@ -53,7 +53,7 @@ const HomeExploreProject = () => {
     try {
       setLoading(true); // Set loading to true when fetching
 
-      const response = await fetch(`/recommendations/${state?._id}`);
+      const response = await fetch(`https://api-sankalp.vercel.app/recommendations/${state?._id}`);
       const data = await response.json();
 
       // Handle the recommended projects

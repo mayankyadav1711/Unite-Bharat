@@ -90,7 +90,7 @@ const HomeViewProject = () => {
     const fetchProjectDetails = async () => {
 
       try {
-        const response = await fetch(`/projects/${projectId}`);
+        const response = await fetch(`https://api-sankalp.vercel.app/projects/${projectId}`);
         const data = await response.json();
         setProjectDetails(data);
         setGooglequery(data?.projectTitle);
@@ -122,7 +122,7 @@ const HomeViewProject = () => {
 
       setLoading(true);
 
-      const response = await fetch("/google-search", {
+      const response = await fetch("https://api-sankalp.vercel.app/google-search", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -150,7 +150,7 @@ const HomeViewProject = () => {
 
       setLoading(true);
 
-      const response = await fetch("/youtube-search", {
+      const response = await fetch("https://api-sankalp.vercel.app/youtube-search", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -178,7 +178,7 @@ const HomeViewProject = () => {
 
       setLoading(true);
 
-      const response = await fetch("/google-scholar-search", {
+      const response = await fetch("https://api-sankalp.vercel.app/google-scholar-search", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -202,7 +202,7 @@ const HomeViewProject = () => {
       // Optimistically update the local state
       setLiked((prevLiked) => !prevLiked);
 
-      const response = await fetch(`/like/${projectId}`, {
+      const response = await fetch(`https://api-sankalp.vercel.app/like/${projectId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -238,7 +238,7 @@ const HomeViewProject = () => {
       handleYouTubeSearch(searchedQuery);
       handleScholarSearch(searchedQuery);
       handleProjectSearch(searchedQuery);
-      const response = await fetch(`/view/${projectId}`, {
+      const response = await fetch(`https://api-sankalp.vercel.app/view/${projectId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
