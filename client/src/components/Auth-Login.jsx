@@ -60,7 +60,7 @@ const AuthLogin = () => {
     };
     console.log(payload);
     // Make an API call to your server for user login
-    fetch("/signin", {
+    fetch("https://api-sankalp.vercel.app/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
