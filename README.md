@@ -1,6 +1,5 @@
 <figure><img src=".gitbook/assets/Screenshot 2024-05-12 193429.png" alt=""> </figure> 
 
-# Unite-Bharat
 
 ## Overview
 
