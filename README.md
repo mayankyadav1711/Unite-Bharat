@@ -41,7 +41,7 @@
 
 <figure><img src=".gitbook/assets/Screenshot 2024-05-12 195035.png" alt=""><figcaption><p>Web Scrapping Module</p></figcaption></figure>
 
-5. **Student Dashboard** 🎓:  Personalized dashboard for students to manage their projects, tasks, and interactions within the platform.
+5. **Student Dashboard**🎓:  Personalized dashboard for students to manage their projects, tasks, and interactions within the platform.
 
 
 
