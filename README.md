@@ -90,7 +90,7 @@
 
 <figure><img src=".gitbook/assets/Screenshot 2024-05-12 195331.png" alt=""><figcaption><p>Event Form functionality in Admin Dashboard</p></figcaption></figure>
 
-11. **Web Analytics Integration** 🌐:  Integration with platforms like Google Analytics and Microsoft Clarity to track and analyze user behavior and website performance.
+11. **Web Analytics Integration** 🌐:  Integration with platforms like Google Analytics & Microsoft Clarity to track and analyze user behavior and website performance.
 
 <figure><img src=".gitbook/assets/Screenshot 2024-05-12 195336.png" alt=""><figcaption><p>Web Analytics Integration ie : Google Analytics and Microsoft Clarity</p></figcaption></figure>
 
